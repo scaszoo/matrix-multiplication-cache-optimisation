@@ -43,7 +43,7 @@ var (
 	threads = runtime.NumCPU()
 )
 
-func calculateMatrix(matrixSource *[y][x]int, matrixTarget *[y][x]int, rowStart int, rowCount int){ // , channel chan int) {
+func calculateMatrix(matrixSource *[y][x]int, matrixTarget *[y][x]int, rowStart int, rowCount int){
 	var i, j, k, tmp int
 	for i = rowStart;  i<rowCount; i++ { // row
 		for j = 0;  j<x; j++ { // column
@@ -57,7 +57,7 @@ func calculateMatrix(matrixSource *[y][x]int, matrixTarget *[y][x]int, rowStart 
 	waitgroup.Done() // decrement waitgroup counter
 }
 
-func calculateMatrixTurned(matrixSource *[y][x]int, matrixSourceTurned *[y][x]int, matrixTarget *[y][x]int, rowStart int, rowCount int){ // , channel chan int) {
+func calculateMatrixTurned(matrixSource *[y][x]int, matrixSourceTurned *[y][x]int, matrixTarget *[y][x]int, rowStart int, rowCount int){
 	var i, j, k, tmp int
 	for i = rowStart;  i<rowCount; i++ { // row
 		for j = 0;  j<x; j++ { // column
