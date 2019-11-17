@@ -73,7 +73,7 @@ func calculateMatrixTurned(matrixSource *[y][x]int, matrixSourceTurned *[y][x]in
 
 func main() {
 	fmt.Printf("Number of available threads: %d\n", threads)
-	fmt.Printf("# of rows: %d, # of go routines thats going to get started: %d, rows per thread: %d\n\n\n", y, threads, y % threads)
+	fmt.Printf("# of rows: %d, # of go routines thats going to get started: %d, rows per thread: %d\n\n\n", y, threads, y / threads)
 	if y % threads != 0 {
 		fmt.Printf("Ratio of rows and # of go routines doesn't divide properly, please adjust y! Remainder: %d", y % threads)
 		return
